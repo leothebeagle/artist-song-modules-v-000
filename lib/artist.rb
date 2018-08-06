@@ -6,6 +6,8 @@ class Artist
 
   @@artists = []
 
+  extend Memorable
+
   def self.find_by_name(name) #Artist.find_by_name(radiohead) #=> #<radiohead>
     @@artists.detect{|a| a.name == name}
   end
