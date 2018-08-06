@@ -27,8 +27,8 @@ class Artist
     songs.each { |song| add_song(song) }
   end
 
-  def to_param #a way of normalizing the name of the artist. downcases it and gets rid of any spaces and replaces it with a -
-    name.downcase.gsub(' ', '-')
-  end
+  # def to_param #a way of normalizing the name of the artist. downcases it and gets rid of any spaces and replaces it with a -
+  #   name.downcase.gsub(' ', '-')
+  # end
 
 end
