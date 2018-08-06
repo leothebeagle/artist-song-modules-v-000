@@ -4,30 +4,19 @@ class Song
   attr_accessor :name
   attr_reader :artist
 
-  @@songs = []
+  @@songs = [] #will collect all instances of songs created
+
+  extend Memorable::ClassMethods
+  extend Findable
+  include Paramable
+  include Memorable::InstanceMethods
 
   def initialize
-    @@songs << self
+    self.class.all << self
   end
 
-  def self.find_by_name(name)
-    @@songs.detect{|a| a.name == name}
-  end
-
-  def artist=(artist)
+  def artist=(artist) #why are we specifiying it here and not relying on attr_writer or attr_accessor to write the method for us? isnt it doing the same thing?
     @artist = artist
-  end
-
-  def self.reset_all
-    @@songs.clear
-  end
-
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
-
-  def self.count
-    self.all.count
   end
 
   def self.all
