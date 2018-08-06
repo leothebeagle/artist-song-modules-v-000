@@ -6,13 +6,13 @@ class Artist
 
   @@artists = []
 
-  def self.find_by_name(name)
+  def self.find_by_name(name) #Artist.find_by_name(radiohead) #=> #<radiohead>
     @@artists.detect{|a| a.name == name}
   end
 
   def initialize
     @@artists << self
-    @songs = []
+    @songs = [] #an artist has many songs and this sets the initial artist's song array. Its empty to begin with 
   end
 
   def self.all
@@ -20,7 +20,7 @@ class Artist
   end
 
   def self.reset_all
-    self.all.clear
+    self.all.clear #since we are within a class method here, self refers to the class.
   end
 
   def self.count
