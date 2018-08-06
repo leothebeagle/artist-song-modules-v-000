@@ -11,7 +11,7 @@ class Song
   include Paramable
 
   def initialize
-    @@songs << self
+    self.class.all << self
   end
 
   def artist=(artist) #why are we specifiying it here and not relying on attr_writer or attr_accessor to write the method for us? isnt it doing the same thing?
