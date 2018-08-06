@@ -29,10 +29,10 @@ class Artist
 
   def add_song(song) #passes in an instance of song as an argument
     @songs << song
-    song.artist = self #sets the artist attribute for that song to self 
+    song.artist = self #sets the artist attribute for that song to self
   end
 
-  def add_songs(songs)
+  def add_songs(songs) #passes in an array of song instances then iterates over it and calls add_song (defined above) on each song instance 
     songs.each { |song| add_song(song) }
   end
 
