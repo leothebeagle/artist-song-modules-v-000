@@ -9,10 +9,6 @@ class Artist
   extend Memorable
   extend Findable
 
-  # def self.find_by_name(name) #Artist.find_by_name(radiohead) #=> #<radiohead>
-  #   @@artists.detect{|a| a.name == name}
-  # end
-
   def initialize
     @@artists << self
     @songs = [] #an artist has many songs and this sets the initial artist's song array. Its empty to begin with
