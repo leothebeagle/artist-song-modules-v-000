@@ -15,7 +15,7 @@ class Song
     @@songs.detect{|a| a.name == name} #iterates over all the songs and returns the first one with that name.
   end
 
-  def artist=(artist)
+  def artist=(artist) #why are we specifiying it here and not relying on attr_writer or attr_accessor to write the method for us? isnt it doing the same thing?
     @artist = artist
   end
 
