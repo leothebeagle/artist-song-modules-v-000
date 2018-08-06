@@ -19,17 +19,17 @@ class Song
     @artist = artist
   end
 
-  def self.reset_all
-    self.all.clear
-  end
+  # def self.reset_all
+  #   self.all.clear
+  # end
 
   def to_param
     name.downcase.gsub(' ', '-')
   end
 
-  def self.count #calls the class method self.all which is defined next.
-    self.all.count
-  end
+  # def self.count #calls the class method self.all which is defined next.
+  #   self.all.count
+  # end
 
   def self.all
     @@songs
