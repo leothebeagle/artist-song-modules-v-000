@@ -27,7 +27,7 @@ class Song
     name.downcase.gsub(' ', '-')
   end
 
-  def self.count
+  def self.count #calls the class method self.all which is defined next. 
     self.all.count
   end
 
