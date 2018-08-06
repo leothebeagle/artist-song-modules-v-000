@@ -9,7 +9,7 @@ class Song
   extend Memorable::ClassMethods
   extend Findable
   include Paramable
-  include Memorable::CLassMethods
+  include Memorable::InstanceMethods
 
   def initialize
     self.class.all << self
