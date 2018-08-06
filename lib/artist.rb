@@ -19,13 +19,13 @@ class Artist
     @@artists
   end
 
-  def self.reset_all
-    self.all.clear #since we are within a class method here, self refers to the class.
-  end
+  # def self.reset_all
+  #   self.all.clear #since we are within a class method here, self refers to the class.
+  # end
 
-  def self.count
-    self.all.count
-  end
+  # def self.count
+  #   self.all.count
+  # end
 
   def add_song(song) #passes in an instance of song as an argument
     @songs << song
