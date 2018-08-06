@@ -32,11 +32,11 @@ class Artist
     song.artist = self #sets the artist attribute for that song to self
   end
 
-  def add_songs(songs) #passes in an array of song instances then iterates over it and calls add_song (defined above) on each song instance 
+  def add_songs(songs) #passes in an array of song instances then iterates over it and calls add_song (defined above) on each song instance
     songs.each { |song| add_song(song) }
   end
 
-  def to_param
+  def to_param #a way of normalizing the name of the artist. downcases it and gets rid of any spaces and replaces it with a -
     name.downcase.gsub(' ', '-')
   end
 
