@@ -11,7 +11,7 @@ class Artist
   include Paramable
 
   def initialize
-    @@artists << self
+    self.class.all << self
     @songs = [] #an artist has many songs and this sets the initial artist's song array. Its empty to begin with
   end
 
