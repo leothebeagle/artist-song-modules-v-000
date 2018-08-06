@@ -12,7 +12,7 @@ class Artist
   include Memorable::InstanceMethods
 
   def initialize
-    self.class.all << self
+    super
     @songs = [] #an artist has many songs and this sets the initial artist's song array. Its empty to begin with
   end
 
