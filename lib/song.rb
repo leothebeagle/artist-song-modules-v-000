@@ -6,6 +6,8 @@ class Song
 
   @@songs = [] #will collect all instances of songs created
 
+  extend Memorable 
+  
   def initialize
     @@songs << self
   end
